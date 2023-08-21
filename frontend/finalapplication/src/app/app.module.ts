@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
 import { FullpageComponent } from './layout/fullpage/fullpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

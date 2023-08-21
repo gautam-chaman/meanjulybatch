@@ -1,1 +1,57 @@
-<p>login works!</p>
+<div class="container mt-5 border p-5 shadow">
+    <div class="row">
+<div class="col-md-12">
+
+<h2 class="text-center">login</h2>
+
+</div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-2 border-end border-primary p-4 shadow">
+         <img src="../../../../assets/images/open-id-146324_1280.png" width="100%" height="200px">
+
+        </div>
+        <div class="col-md-6 mt-2">
+
+            <div class="row">
+
+                <form  [formGroup]="loginform" (ngSubmit)="loginuser()">
+                    <div class="col-md-12 mt-4">
+                        <label class="form-label">UserName</label>
+                        <input type="text" class="form-control" [placeholder]="['Enter Your Username']" formControlName="user">
+                    
+                        <span style="color: red;" *ngIf='user && user.invalid && user.touched'> Please Enter Valid Information</span>
+
+
+                    </div>
+                    
+                    <div class="col-md-12 mt-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" [placeholder]="['Enter Your password']" formControlName="password">
+                        <span style="color: red;" *ngIf='password && password.invalid && password.touched'> Please Enter Valid Information</span>
+
+
+                    </div>
+
+                    <div class="col-md-12 mt-4">
+                        <button type="submit" class="btn btn-primary" [disabled]="loginform.invalid" >Login</button>&nbsp;
+                        <button type="reset" class="btn btn-danger">Reset</button>
+
+                        <a routerLink='register' class="link-success ms-2">register</a>
+
+
+
+                    </div>
+
+                    
+                </form>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
