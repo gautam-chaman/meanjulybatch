@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EditrecordComponent } from './editrecord/editrecord.component';
 
 
 @NgModule({
@@ -16,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,FormsModule,ReactiveFormsModule
+    AuthRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ]
 })
 export class AuthModule { }

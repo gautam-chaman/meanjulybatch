@@ -2,3 +2,21 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+
+
+h1{
+    color:red !important;
+  }
+  .sidebar1
+  {
+    width:160px;
+    height:100%;
+    border:1px solid red;
+    float:left;
+    position: fixed;
+    margin-top:10px;
+  }
+  
+  

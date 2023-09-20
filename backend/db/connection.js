@@ -1,8 +1,7 @@
-const mongoose=require("mongoose");
-const DB="mongodb+srv://chamangautamme:gautam221@cluster0.moflkhm.mongodb.net/ducat";
-mongoose.connect(DB,{
+const mongoose =require("mongoose");
+const DB="mongodb+srv://chamangautamme:Gautam221@cluster0.moflkhm.mongodb.net/newmeanbatch";
 
+mongoose.connect(DB,{
     useNewUrlParser:true,
     useUnifiedTopology:true
-
-}).then(()=>console.log("connection start")).catch((error)=>console.log(error.message));
+}).then(()=>console.log("connection start ")).catch((error)=>console.log(error.message));

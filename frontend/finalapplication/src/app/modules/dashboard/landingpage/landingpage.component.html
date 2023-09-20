@@ -1,1 +1,53 @@
-<p>landingpage works!</p>
+<section>
+
+<h1>
+    View the Details
+
+</h1>
+
+<H2>Total Records is ..{{myarray.length}}
+</H2>
+
+
+
+<table class="table table-bordered-2 mt-5">
+    <thead>
+      <tr >
+        <th class="bg-dark text-white">Id</th>
+        <th class="bg-dark text-white">User</th>
+        <th class="bg-dark text-white">Email id</th>
+        <th class="bg-dark text-white">Age</th>
+        <th class="bg-dark text-white">mobile</th>
+        <th class="bg-dark text-white">address</th>
+        <th class="bg-dark text-white">reAddress</th>
+        <th class="bg-dark text-white">pass</th>
+        <th class="bg-dark text-white">repass</th>
+        
+        
+      </tr>
+    </thead>
+    <tr *ngFor="let a of myarray">
+
+        <td>{{a._id}}</td>
+        <td>{{a.user}}</td>
+
+        <td>{{a.email}}</td>
+
+        <td>{{a.age}}</td>
+
+        <td>{{a.mobile}}</td>
+
+        <td>{{a.address}}</td>
+
+        <td>{{a.paddress}}</td>
+
+        <td>{{a.pass}}</td>
+        <td>{{a.repass}}</td>
+
+
+    </tr>
+    <tbody>
+
+</table>
+
+</section>
