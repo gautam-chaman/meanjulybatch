@@ -36,4 +36,58 @@ export class ServiceService {
 
   }
 
+
+  // Delete my data  Service
+
+  mydelete(id:any){
+
+    let ids=id;
+    return this.http.delete(this.url+"deleterecord/"+`${ids}`)
+  }
+
+
+
+  // update data by id
+
+  // myupdatedata(data:any,id:any):Observable<any>
+
+  //   let ids=id;
+  //   return this.http.post(`${this.url}update/ ${ids}`,data)
+  // }
+
+
+  updatedata(data:any, id:any):Observable<any>{
+    let ids=id;
+    return this.http.post(`${this.url}update/${ids}`,data)
+
+
+  }
+
+  // update service is end here
+
+  // single user is start here 
+  
+  
+
+singleuser(id:any){
+  let ids=id;
+
+  return this.http.get(`${this.url+"singledata"}/${ids}`)
+  
+
+
+}
+
+// single service is end here
+
+// login service start here
+
+loginuser(data:any):Observable<any>{
+  return this.http.post(`${this.url}login`,data)
+
+}
+
+
+
+
 }

@@ -7,7 +7,6 @@ import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EditrecordComponent } from './editrecord/editrecord.component';
 
 
 @NgModule({

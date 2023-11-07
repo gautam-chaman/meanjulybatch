@@ -3,14 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DetailsComponent } from './details/details.component';
 import { MygraphComponent } from './mygraph/mygraph.component';
-import { EditrecordComponent } from '../auth/editrecord/editrecord.component';
+import { EditComponent } from './edit/edit.component';
+import { ViewdataComponent } from './viewdata/viewdata.component';
+
 
 const routes: Routes = [
 
 {path:'',component:LandingpageComponent},
 {path:'details',component:DetailsComponent},
 {path:'mygraph',component:MygraphComponent},
-{path:'dashboard/edit',component:EditrecordComponent}
+{path:'edit/:id',component:EditComponent},
+{path:'view/:id',component:ViewdataComponent}
 
 ];
 

@@ -27,10 +27,10 @@
         
                     <div class="row">
         
-                        <form  [formGroup]="loginform" (ngSubmit)="loginuser()">
+                        <form  [formGroup]='loginform' (ngSubmit)="loginsubmit()">
                             <div class="col-md-12 mt-4">
                                 <label class="form-label text-light">UserName</label>
-                                <input type="text" class="form-control" [placeholder]="['Enter Your Username']" formControlName="user">
+                                <input type="text" class="form-control" [placeholder]="['Enter Your Username']" formControlName="email">
                             
                                 <span style="color: red;" *ngIf='user && user.invalid && user.touched'> Please Enter Valid Information</span>
         
@@ -39,8 +39,8 @@
                             
                             <div class="col-md-12 mt-4">
                                 <label class="form-label text-light">Password</label>
-                                <input type="password" class="form-control" [placeholder]="['Enter Your password']" formControlName="password">
-                                <span style="color: red;" *ngIf='password && password.invalid && password.touched'> Please Enter Valid Information</span>
+                                <input type="password" class="form-control" [placeholder]="['Enter Your password']" formControlName="pass">
+                                <span style="color: red;" *ngIf='pass && pass.invalid && pass.touched'> Please Enter Valid Information</span>
         
         
                             </div>

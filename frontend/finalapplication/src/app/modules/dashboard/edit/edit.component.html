@@ -1,12 +1,13 @@
+<section>
 
-
-<div class="container mt-5 border p-5 shadow bg-secondary">
+    
+<div class="container mt-5 border p-5 shadow bg-light">
     <div>
-        <form  [formGroup]="myform" (ngSubmit)="registerform()">
+        <form  [formGroup]="myform" (ngSubmit)="updatedata()">
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3 style="text-align: center; color: white;">Register</h3>
+                    <h3 style="text-align: center; color: white;">UPDATE</h3>
 
                 </div>
             </div>
@@ -18,7 +19,7 @@
                 </div>                <div class="col-md-6 mt-2">
                     <label class="form-label">Email</label>
                     <input type="email" class="form-control" formControlName="email">
-                    <span style="color: red;" *ngIf='email && email.invalid && email.touched'> Please Enter Valid Email</span>
+                    <span style="color: red;" *ngIf='email && email.invalid && email.touched'> Please Enter Valid Information</span>
 
                 </div>                <div class="col-md-6 mt-2">
                     <label class="form-label">Mobile</label>
@@ -47,19 +48,10 @@
                 </div>
 
                 <div class="col-md-12 mt-5 text-center">
-                <button type="submit" class="btn btn-success me-3" [disabled]="myform.invalid">Register</button>
+                <button type="submit" class="btn btn-success me-3" [disabled]="myform.invalid">Update</button>
 
                 <button type="reset" class="btn btn-danger ms-3">Cancel</button>
 
-                <a [routerLink]="['/']" class="link-info ms-4">Go to login</a>
-
-
-
-
-
-
-
-                
 
                 </div>
             </div>
@@ -72,4 +64,4 @@
 
     
 </div>
-
+</section>

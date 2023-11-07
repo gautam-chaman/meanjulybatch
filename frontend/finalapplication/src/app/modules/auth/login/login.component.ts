@@ -1,24 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ServiceService} from '../../service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
+  constructor(private myservice:ServiceService, private myroutes:ActivatedRoute){
 
+  }
+
+  ngOnInit(): void {
+    
+  }
 
   loginform=new FormGroup({
 
-user:new FormControl('',[Validators.required,Validators.email]),
-password:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)])
+email:new FormControl('',[Validators.required,Validators.email]),
+pass:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)])
 
 
   })
 
-  loginuser(){
+  loginsubmit(){
+    this.myservice.loginuser(this.loginform.value).subscribe((b)=>{
+      
+      console.log(b);
+
+      if(b.status===480){
+        window.location.href="http://localhost:4200/dashboard";
+      }
+      else{
+        alert("wrong password")
+      }
+    })
 
 
   }
@@ -31,7 +50,7 @@ password:new FormControl('',[Validators.required,Validators.minLength(6),Validat
   }
 
 
-  get password(){
+  get pass(){
 
     return this.loginform.get('password');
   }

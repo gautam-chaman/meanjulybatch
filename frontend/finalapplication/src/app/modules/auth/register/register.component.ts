@@ -19,7 +19,7 @@ constructor(private myservice:ServiceService, private myrout:ActivatedRoute){
 
 myform=new FormGroup({
   user:new FormControl(),
-  email:new FormControl('',[Validators.required]),
+  email:new FormControl('',[Validators.required,Validators.email]),
   age:new FormControl(),
   mobile:new FormControl('',[Validators.required, Validators.maxLength(10),Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
   address:new FormControl(),
@@ -31,7 +31,9 @@ myform=new FormGroup({
 
 
 this.myservice.insertdata(this.myform.value).subscribe((d)=>{
-  console.log(d)
+  alert("are you sure ");
+
+  console.log(d);
 })
 
 

@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./landingpage.component.scss']
 })
 export class LandingpageComponent implements OnInit{
-
   myarray:any;
   constructor( private service:ServiceService, private myroute:ActivatedRoute){
 
@@ -30,4 +29,21 @@ export class LandingpageComponent implements OnInit{
     this.mydatabasedata();
 
   }
+
+
+
+// Delete operation is start now 
+
+mydeleterecord(id:any):void{
+  this.service.mydelete(id).subscribe(()=>{
+
+    console.log(id);
+    alert("data is delete successfully");
+    this.mydatabasedata();
+  })
+
+
+}
+
+
 }
